@@ -76,39 +76,3 @@ def contentClustering(activityIndex):
         return results
 
     return give_recommendations(activityIndex,True)
-    # plt.figure(figsize=(20,20))
-    # for q in range(1,5):
-    #     plt.subplot(2,2,q)
-    #     index = np.random.choice(np.arange(0,len(X)))
-    #     to_plot_data = cos_sim_data.drop(index,axis=1)
-    #     plt.plot(to_plot_data.loc[index],'.',color='firebrick')
-    #     recomm_index = give_recommendations(index)
-    #     x = recomm_index['Index']
-    #     y = cos_sim_data.loc[index][x].tolist()
-    #     m = recomm_index['Activities']
-    #     plt.plot(x,y,'.',color='navy',label='Recommended Activities')
-    #     plt.title('Activity Attempted: '+data['title'].loc[index])
-    #     plt.xlabel('Activity Index')
-    # k=0
-    # for x_i in x:
-    #     plt.annotate('%s'%(m[k]),(x_i,y[k]),fontsize=10)
-    #     k=k+1
-
-    # plt.ylabel('Cosine Similarity')
-    # plt.ylim(0,1)
-
-    # give_recommendations(5,True)
-
-    # give_recommendations(2,False,True)
-
-    # give_recommendations(30,True,True,True)
-
-    # recomm_list = []
-    # for i in range(len(X)):
-    #     recomm_i = give_recommendations(i)
-    #     recomm_list.append(recomm_i['Activities'])
-    #     recomm_data = pd.DataFrame(recomm_list,columns=['First Recommendation','Second Recommendation','Third Recommendation','Fourth Recommendation','Fifth Recommendation'])
-    #     recomm_data['Attempted Activity'] = data['title']
-    #     recomm_data = recomm_data[['Attempted Activity','First Recommendation','Second Recommendation','Third Recommendation','Fourth Recommendation','Fifth Recommendation']]
-
-    # recomm_data.sample(frac=1).head()

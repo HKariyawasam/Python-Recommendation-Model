@@ -107,10 +107,7 @@ def collabUser(propId):
         Activities_under_consideration = list(set(Activity_attempted_by_similar_users)-set(list(map(str, Most_recent_actvities_attempted_by_user))))
         Activities_under_consideration = list(map(int, Activities_under_consideration)) 
                                                                                         
-        # print(Activity_attempted_by_user)
-        # print(Most_recent_actvities_attempted_by_user)
-        # print(Activities_under_consideration)
-
+    
         score = []
         for item in Activities_under_consideration:
             c = final_activity.loc[:,item]
@@ -136,12 +133,3 @@ def collabUser(propId):
     
     return User_item_score1(propId)
 
-    # user = int(input("Enter the user id to whom you want to recommend : "))
-    # predicted_activities = User_item_score1(user)
-    # print(" ")
-    # print("The Recommendations for User Id : ", user)
-    # print("   ")
-    # for i in predicted_activities:
-    #     print(i)
-    # activity_considered = i
-    # print(activity_considered)
