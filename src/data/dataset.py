@@ -29,9 +29,9 @@ credentials = ServiceAccountCredentials.from_json_keyfile_dict(credentials_json,
 client = gspread.authorize(credentials)
 
 
-spreadsheet_url1 = 'https://docs.google.com/spreadsheets/d/10AQCTZt-mpp0xQ5T4UnU0-yLNCZ-OPr3/edit?usp=share_link&ouid=114060678686349206997&rtpof=true&sd=true'
+spreadsheet_url1 = 'https://docs.google.com/spreadsheets/d/10AQCTZt-mpp0xQ5T4UnU0-yLNCZ-OPr3/edit?usp=sharing&ouid=114060678686349206997&rtpof=true&sd=true'
 
-spreadsheet_url2 = 'https://docs.google.com/spreadsheets/d/1j-xZhA0ozhsDRXf-0qoAqrGgHxF-dwpo/edit?usp=share_link&ouid=114060678686349206997&rtpof=true&sd=true'
+spreadsheet_url2 = 'https://docs.google.com/spreadsheets/d/1j-xZhA0ozhsDRXf-0qoAqrGgHxF-dwpo/edit?usp=sharing&ouid=114060678686349206997&rtpof=true&sd=true'
 
 spreadsheet1 = client.open_by_url(spreadsheet_url1)
 
