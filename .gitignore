@@ -8,3 +8,6 @@ vscode/
 .vscode/
 /tmp/
 tmp/
+build
+*~
+*.pyc
