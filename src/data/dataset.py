@@ -2,39 +2,19 @@ import pandas as pd
 from flask import jsonify
 from openpyxl import load_workbook
 
-import gdown
 
-# Shared Google Drive link of the Excel file
-shared_link = 'https://docs.google.com/spreadsheets/d/1xjEEOrjQkUBLDtb1UHGrurKkVdmp0meS/edit?usp=share_link&ouid=114060678686349206997&rtpof=true&sd=true'
-shared_link2 = 'https://docs.google.com/spreadsheets/d/18lfP1BZOfpy1S1Rjgrr1G7sy0JiknDQV/edit?usp=sharing&ouid=114060678686349206997&rtpof=true&sd=true'
+spreadsheet_url1 = 'https://docs.google.com/spreadsheets/d/10AQCTZt-mpp0xQ5T4UnU0-yLNCZ-OPr3/edit?usp=share_link&ouid=114060678686349206997&rtpof=true&sd=true'
 
-# Extract the file ID from the shared link
-file_id = shared_link.split('/')[-2]
-file_id2 = shared_link2.split('/')[-2]
-
-# Construct the download link for the file
-download_link = f'https://drive.google.com/uc?id={file_id}'
-download_link2 = f'https://drive.google.com/uc?id={file_id2}'
-
-# Download the Excel file
-file_path = 'file.xlsx'
-file_path2 = 'file2.xlsx'
-gdown.download(download_link, file_path, quiet=False)
-gdown.download(download_link, file_path2, quiet=False)
-
-
-
-
-
+spreadsheet_url2 = 'https://docs.google.com/spreadsheets/d/1j-xZhA0ozhsDRXf-0qoAqrGgHxF-dwpo/edit?usp=share_link&ouid=114060678686349206997&rtpof=true&sd=true'
 
 
 
 def readActivityDataFrame():
-    activities_df = pd.read_excel(file_path2)
+    activities_df = pd.read_excel(spreadsheet_url1)
     return activities_df
 
 def readUsersCompletionDataFrame():
-    completerates_df = pd.read_excel(file_path)
+    completerates_df = pd.read_excel(spreadsheet_url2)
     return completerates_df
 
 def updateUserCompletionRates(data):
