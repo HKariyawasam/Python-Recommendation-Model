@@ -1,5 +1,6 @@
 vrec/
 .vrec/
+vendor/vendor
 __pycache__/
 models/physical_activity_models/__pycache__/
 data/__pycache__/
