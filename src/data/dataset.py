@@ -22,14 +22,14 @@ def readActivityDataFrame():
     # activities_df = pd.read_excel(spreadsheet_url1)
     if response1.status_code == 200:
         buffer1 = response1.content
-        activities_df = pd.read_excel(buffer1)
+        activities_df = pd.read_excel(buffer1, engine="openpyxl")
         return activities_df
 
 def readUsersCompletionDataFrame():
     # completerates_df = pd.read_excel(spreadsheet_url2)
     if response2.status_code == 200:
         buffer2 = response2.content
-        completerates_df = pd.read_excel(buffer2)
+        completerates_df = pd.read_excel(buffer2, engine="openpyxl")
         return completerates_df 
 
 def updateUserCompletionRates(data):
