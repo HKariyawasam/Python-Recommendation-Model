@@ -21,13 +21,15 @@ response2 = requests.get(shared_link_url2)
 def readActivityDataFrame():
     # activities_df = pd.read_excel(spreadsheet_url1)
     if response1.status_code == 200:
-        activities_df = pd.read_excel(response1)
+        buffer1 = response1.content
+        activities_df = pd.read_excel(buffer1)
         return activities_df
 
 def readUsersCompletionDataFrame():
     # completerates_df = pd.read_excel(spreadsheet_url2)
     if response2.status_code == 200:
-        completerates_df = pd.read_excel(response2)
+        buffer2 = response2.content
+        completerates_df = pd.read_excel(buffer2)
         return completerates_df 
 
 def updateUserCompletionRates(data):
