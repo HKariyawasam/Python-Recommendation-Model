@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT app:app
+web: python fetch_packages.py && gunicorn your_app:app
