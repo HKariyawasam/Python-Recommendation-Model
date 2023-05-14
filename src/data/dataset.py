@@ -6,8 +6,8 @@ import requests
 
 
 # Define the shared link URL of the Google Sheets document
-shared_link_url1 = "https://docs.google.com/spreadsheets/d/10AQCTZt-mpp0xQ5T4UnU0-yLNCZ-OPr3/export?format=csv"
-shared_link_url2 = "https://docs.google.com/spreadsheets/d/1j-xZhA0ozhsDRXf-0qoAqrGgHxF-dwpo/export?format=csv"
+shared_link_url1 = "https://docs.google.com/spreadsheets/d/1oborofkC_LFen06UuN_QHVYPGHawBDew/export?format=csv"
+shared_link_url2 = "https://docs.google.com/spreadsheets/d/10YgM24MDWkxetLBfFCWczKSu-CA4jJ7a/export?format=csv"
 # Send a GET request to download the CSV data
 response1 = requests.get(shared_link_url1)
 response2 = requests.get(shared_link_url2)
