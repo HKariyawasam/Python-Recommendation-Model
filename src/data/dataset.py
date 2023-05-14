@@ -8,7 +8,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 # Define the scope and credentials for accessing the Google Drive and Sheets APIs
-scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive','https://www.googleapis.com/auth/spreadsheets']
 credentials_json = {
   "type": "service_account",
   "project_id": "rec-engine-packages",
