@@ -1,6 +1,7 @@
 import pandas as pd
 from flask import jsonify
 from openpyxl import load_workbook
+import os
 
 
 import gspread
@@ -8,7 +9,8 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 # Define the scope and credentials for accessing the Google Drive and Sheets APIs
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-credentials = ServiceAccountCredentials.from_json_keyfile_name('credentials.json', scope)
+credentials_json = os.environ['GOOGLE_APPLICATION_CREDENTIALS']
+credentials = ServiceAccountCredentials.from_json_keyfile_dict(credentials_json, scope)
 
 
 # Authenticate and authorize the credentials
