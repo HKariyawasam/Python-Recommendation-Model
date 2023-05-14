@@ -1,1 +1,2 @@
-release: python fetch_packages.py && gunicorn app:app
+release: python fetch_packages.py
+web: gunicorn app:app
