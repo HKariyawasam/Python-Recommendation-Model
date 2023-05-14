@@ -1,5 +1,4 @@
 import pandas as pd
-from flask import jsonify
 from openpyxl import load_workbook
 
 def readActivityDataFrame():
